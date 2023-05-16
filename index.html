@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3rd Meet SSI Academy - Tracking System</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/my-css.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row content">
+        <div class="col">
+          <p class="heading-s mb-2">Periksa Ongkos Kirim</p>
+          <div class="form-cek">
+            <form action="">
+              <div class="row">
+                <div class="col">
+                  <p class="font-l-sb mb-3">Data Asal</p>
+                  <div class="mb-3">
+                    <p class="font-m-m mb-2">Provinsi</p>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      id="origin-provinces"
+                      name="origin-provinces"
+                    >
+                      <option selected>Pilih Provinsi</option>
+                    </select>
+                  </div>
+                  <!-- option asal provinsi -->
+                  <div class="mb-3">
+                    <p class="font-m-m mb-2">Kota</p>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      id="origin-cities"
+                      name="origin-cities"
+                    >
+                      <option selected>Pilih Kota</option>
+                    </select>
+                  </div>
+                  <!-- opstion asal kota -->
+                </div>
+                <!-- col -->
+                <div class="col">
+                  <p class="font-l-sb mb-3">Data Tujuan</p>
+                  <div class="mb-3">
+                    <p class="font-m-m mb-2">Provinsi</p>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      id="destionation-provinces"
+                    >
+                      <option selected>Pilih Provinsi</option>
+                    </select>
+                  </div>
+                  <!-- option tujuan provinsi -->
+                  <div class="mb-3">
+                    <p class="font-m-m mb-2">Kota</p>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      id="destination-cities"
+                    >
+                      <option selected>Pilih Kota</option>
+                    </select>
+                  </div>
+                  <!-- opstion tujuan kota -->
+                </div>
+                <!-- col -->
+
+                <div class="mb-3">
+                  <p class="font-l-sb mb-2">Berat (Gram)</p>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="weight"
+                    name="weight"
+                    placeholder="Berat Barang"
+                  />
+                </div>
+                <!-- option tujuan provinsi -->
+
+                <div class="d-grid gap-2">
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    id="check-postage"
+                  >
+                    Cek
+                  </button>
+                </div>
+                <!--button cek-->
+              </div>
+              <!-- row -->
+            </form>
+            <!-- form -->
+          </div>
+          <!-- form-cek -->
+        </div>
+        <!-- col -->
+
+        <div class="col">
+          <!-- <p class="heading-s mb-2">Opsi Kurir</p> -->
+          <!-- <div class="opsi-kurir"> -->
+          <!-- <div class="d-flex flex-direction-row gap-2"> -->
+          <!-- <div class="border-checkbox">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    JNE
+                  </label>
+                </div>
+              </div> -->
+          <!--checkbox 1-->
+          <!-- <div class="border-checkbox">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    TIKI
+                  </label>
+                </div>
+              </div> -->
+          <!--checkbox 1-->
+          <!-- <div class="border-checkbox">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    POS
+                  </label>
+                </div>
+              </div> -->
+          <!--checkbox 1-->
+          <!-- </div> -->
+          <!-- </div> -->
+          <!--opsi kurir-->
+
+          <p class="heading-s mb-2">Hasil Ongkos Kirim</p>
+          <div class="hasil">
+            <!-- <div id="">hasil kosong</div> -->
+            <div class="JNE" id="result-jne-list">
+              <p class="font-m-sb" id="title">JNE</p>
+              <!--kurir title-->
+              <!-- <div
+                class="card-hasil d-flex flex-direction-row align-items-center justify-content-between mb-2"
+              >
+                <div>
+                  <p class="font-m-sb">JNE OKE</p>
+                  <p class="font-m-r">Ongkos Kirim Ekonomis</p>
+                </div>
+                <div>
+                  <p class="font-l-sb">Rp 170.0000</p>
+                </div>
+              </div> -->
+              <!--detail hasil-->
+              <!-- <div
+                class="card-hasil d-flex flex-direction-row align-items-center justify-content-between"
+              >
+                <div>
+                  <p class="font-m-sb">JNE Reguler</p>
+                  <p class="font-m-r">Ongkos Kirim Ekonomis</p>
+                </div>
+                <div>
+                  <p class="font-l-sb">Rp 170.0000</p>
+                </div>
+              </div> -->
+              <!--detail hasil-->
+            </div>
+            <div class="TIKI mt-3" id="result-tiki-list">
+              <p class="font-m-sb" id="title">TIKI</p>
+              <!--kurir title-->
+              <!-- <div
+                class="card-hasil d-flex flex-direction-row align-items-center justify-content-between mb-2"
+              >
+                <div>
+                  <p class="font-m-sb">TIKI OKE</p>
+                  <p class="font-m-r">Ongkos Kirim Ekonomis</p>
+                </div>
+                <div>
+                  <p class="font-l-sb">Rp 170.0000</p>
+                </div>
+              </div> -->
+              <!--detail hasil-->
+              <!-- <div
+                class="card-hasil d-flex flex-direction-row align-items-center justify-content-between"
+              >
+                <div>
+                  <p class="font-m-sb">TIKI Reguler</p>
+                  <p class="font-m-r">Ongkos Kirim Ekonomis</p>
+                </div>
+                <div>
+                  <p class="font-l-sb">Rp 170.0000</p>
+                </div>
+              </div> -->
+              <!--detail hasil-->
+            </div>
+            <div class="POS mt-3" id="result-pos-list">
+              <p class="font-m-sb" id="title">POS</p>
+              <!--kurir title-->
+              <!-- <div
+                class="card-hasil d-flex flex-direction-row align-items-center justify-content-between mb-2"
+              >
+                <div>
+                  <p class="font-m-sb">POS OKE</p>
+                  <p class="font-m-r">Ongkos Kirim Ekonomis</p>
+                </div>
+                <div>
+                  <p class="font-l-sb">Rp 170.0000</p>
+                </div>
+              </div> -->
+              <!--detail hasil-->
+              <!-- <div
+                class="card-hasil d-flex flex-direction-row align-items-center justify-content-between"
+              >
+                <div>
+                  <p class="font-m-sb">POS Reguler</p>
+                  <p class="font-m-r">Ongkos Kirim Ekonomis</p>
+                </div>
+                <div>
+                  <p class="font-l-sb">Rp 170.0000</p>
+                </div>
+              </div> -->
+              <!--detail hasil-->
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        getProvinces();
+      });
+
+      function getProvinces() {
+        $.ajax({
+          url: "rajaongkir.php",
+          type: "GET",
+          data: {
+            type: "provinces",
+          },
+          success: function (response) {
+            const data = JSON.parse(response).rajaongkir;
+            const provinces = data.results;
+            // console.log(provinces);
+            if (data.status.code == 200) {
+              let option = "";
+              provinces.forEach((province) => {
+                option += `<option value="${province.province_id}">${province.province}</option>`;
+              });
+
+              $("#origin-provinces").append(option);
+              $("#destionation-provinces").append(option);
+            }
+          },
+        });
+      }
+
+      $("#origin-provinces").on("change", function () {
+        const province = $(this).val();
+        // console.log(province);
+        $("#origin-cities").empty();
+        getCity(province);
+      });
+
+      $("#destionation-provinces").on("change", function () {
+        const province = $(this).val();
+        console.log(province);
+        $("#destination-cities").empty();
+        getCity(province);
+      });
+
+      function getCity($province) {
+        $.ajax({
+          url: "rajaongkir.php",
+          type: "GET",
+          data: {
+            type: "city",
+            province: $province,
+          },
+          success: function (response) {
+            const data = JSON.parse(response).rajaongkir;
+            const cities = data.results;
+            console.log(cities);
+            if (data.status.code == 200) {
+              console.log("helo");
+              let option = "";
+              cities.forEach((city) => {
+                option += `<option value="${city.city_id}">${city.city_name}</option>`;
+              });
+
+              $("#origin-cities").append(option);
+              $("#destination-cities").append(option);
+            }
+          },
+        });
+      }
+
+      function getWeight() {
+        const weight = $("#weight").val();
+        console.log(weight);
+      }
+
+      $("#check-postage").on("click", function () {
+        const origin = $("#origin-cities").val();
+        const destination = $("#destination-cities").val();
+        const weight = $("#weight").val();
+        const courier = "jne";
+
+        console.log(origin, destination, weight, courier);
+
+        $.ajax({
+          url: "rajaongkir.php",
+          type: "POST",
+          data: {
+            type: "postage",
+            origin: origin,
+            destination: destination,
+            weight: weight,
+            courier: courier,
+          },
+          success: function (response) {
+            const data = JSON.parse(response).rajaongkir;
+            const courier = data.query.courier;
+            const results = data.results;
+            console.log(results);
+
+            let jneList = "";
+            results.forEach((result) => {
+              result.costs.forEach((cost) => {
+                jneList += `
+                                  <div class="card-hasil d-flex flex-direction-row align-items-center justify-content-between mb-2">
+                                      <div>
+                                          <p class="font-m-sb">${cost.service}</p>
+                                          <p class="font-m-r">${cost.description}</p>
+                                      </div>
+                                      <div>
+                                          <p class="font-l-sb">${cost.cost[0].value}</p>
+                                      </div>
+                                  </div>
+                                  `;
+              });
+            });
+
+            $("#result-jne-list").append(jneList);
+          },
+
+          complete: function () {
+            $("#check-postage").attr("disabled", false);
+            $("#check-postage").text("Cek");
+          },
+        });
+      });
+
+      $("#check-postage").on("click", function () {
+        const origin = $("#origin-cities").val();
+        const destination = $("#destination-cities").val();
+        const weight = $("#weight").val();
+        const courier = "tiki";
+
+        console.log(origin, destination, weight, courier);
+
+        $.ajax({
+          url: "rajaongkir.php",
+          type: "POST",
+          data: {
+            type: "postage",
+            origin: origin,
+            destination: destination,
+            weight: weight,
+            courier: courier,
+          },
+          success: function (response) {
+            const data = JSON.parse(response).rajaongkir;
+            const courier = data.query.courier;
+            const results = data.results;
+            console.log(results);
+
+            let tikiList = "";
+            results.forEach((result) => {
+              result.costs.forEach((cost) => {
+                tikiList += `
+                                  <div class="card-hasil d-flex flex-direction-row align-items-center justify-content-between mb-2">
+                                      <div>
+                                          <p class="font-m-sb">${cost.service}</p>
+                                          <p class="font-m-r">${cost.description}</p>
+                                      </div>
+                                      <div>
+                                          <p class="font-l-sb">${cost.cost[0].value}</p>
+                                      </div>
+                                  </div>
+                                  `;
+              });
+            });
+
+            $("#result-tiki-list").append(tikiList);
+          },
+
+          complete: function () {
+            $("#check-postage").attr("disabled", false);
+            $("#check-postage").text("Cek");
+          },
+        });
+      });
+
+      $("#check-postage").on("click", function () {
+        const origin = $("#origin-cities").val();
+        const destination = $("#destination-cities").val();
+        const weight = $("#weight").val();
+        const courier = "pos";
+
+        console.log(origin, destination, weight, courier);
+
+        $.ajax({
+          url: "rajaongkir.php",
+          type: "POST",
+          data: {
+            type: "postage",
+            origin: origin,
+            destination: destination,
+            weight: weight,
+            courier: courier,
+          },
+          success: function (response) {
+            const data = JSON.parse(response).rajaongkir;
+            const courier = data.query.courier;
+            const results = data.results;
+            console.log(results);
+
+            let posList = "";
+            results.forEach((result) => {
+              result.costs.forEach((cost) => {
+                posList += `
+                                  <div class="card-hasil d-flex flex-direction-row align-items-center justify-content-between mb-2">
+                                      <div>
+                                          <p class="font-m-sb">${cost.service}</p>
+                                          <p class="font-m-r">${cost.description}</p>
+                                      </div>
+                                      <div>
+                                          <p class="font-l-sb">${cost.cost[0].value}</p>
+                                      </div>
+                                  </div>
+                                  `;
+              });
+            });
+
+            $("#result-pos-list").append(posList);
+          },
+
+          complete: function () {
+            $("#check-postage").attr("disabled", false);
+            $("#check-postage").text("Cek");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
